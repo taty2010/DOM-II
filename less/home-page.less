@@ -1,10 +1,13 @@
 .bus{
+  display: none;
   position: absolute;
   //left: 0;
   top: 90px; 
   max-width: 800px;
-  animation-name: bus;
-  .slide-out-right();
+  -webkit-animation: slide-out-right 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-right 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 
     @-webkit-keyframes slide-out-right {
       0% {
