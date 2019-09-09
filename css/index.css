@@ -1,3 +1,7 @@
+.slide-out-right {
+  -webkit-animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -226,13 +230,55 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+.bus {
+  position: absolute;
+  top: 90px;
+  max-width: 800px;
+  animation-name: bus;
+  -webkit-animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(-800px);
+    transform: translateX(-800px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .home .intro {
   padding: 90px 0 10px;
   border-bottom: 2px dashed #C0C0C0;
 }
 .home .intro img {
-  max-width: 100%;
   height: auto;
+}
+.home .intro img .main-bus {
+  max-width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 .home .intro h2 {
   margin-top: 20px;
