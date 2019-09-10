@@ -43,3 +43,12 @@ function drop(event){
     event.target.appendChild(document.getElementById(data));
 }
 
+const lastImg = document.querySelector('.imgLast')
+
+lastImg.addEventListener('wheel', (zoom) => {
+        let bigger = 1
+        lastImg.style.transform = "scale(1.5)"
+
+});
+
+
