@@ -6,6 +6,16 @@ window.onload = ((event) =>{
 });
 ///END ONLOAD
 
+///WINDOW RESIZE EVENT
+function windowSize(){
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    alert(`I'm shrinking... shrinking!!!`)
+}
+
+window.onresize = windowSize;
+///END RESIZE
+
 /// MOUSEOVER BUS ANIMATION
 const busImg = document.querySelector('img');
 busImg.addEventListener('mouseover', (play)=>{
