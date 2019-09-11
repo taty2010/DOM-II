@@ -76,3 +76,33 @@ lastImg.addEventListener('wheel', (zoom) => {
 ///END WHEEL
 
 
+/// H2 CLICK EVENT 
+const headerText = document.querySelectorAll('h2');
+headerText.forEach((el) =>{
+    el.addEventListener("click", () =>{
+        let firstClick = false;
+        el.style.color = 'pink';
+        el.addEventListener("click", () => {
+            if (firstClick === false){
+                firstClick = true;
+                secondClick = false
+                el.style.color = 'blue';
+                el.addEventListener("click", () => {
+                    if (secondClick === false){
+                        secondClick = true;
+                        thirdClick = false;
+                        el.style.color = "orange";
+                    }
+                })
+            }
+        })
+    })
+    el.addEventListener("dblclick", () => {
+        if (thirdClick === false){
+            el.style.color = null;
+            el.stopPropagation();
+        }
+    })
+
+})
+/// END CLICK EVENT
