@@ -136,3 +136,9 @@ form.forEach((el) => {
         el.target.style.background = '';
     }, true);
 })
+
+
+///SELECT BTN EVENT
+function bttnFunction(){
+    document.getElementById('lastForm').select();
+}
