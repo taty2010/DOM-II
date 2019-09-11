@@ -1,4 +1,6 @@
 
+
+/// MOUSEOVER BUS ANIMATION
 const busImg = document.querySelector('img');
 busImg.addEventListener('mouseover', (play)=>{
     document.querySelector('.bus').style.animationPlayState = 'running';
@@ -6,6 +8,10 @@ busImg.addEventListener('mouseover', (play)=>{
     document.querySelector('.bus').style.display = 'block';
 })
 
+/// END MOUSEOVER
+
+
+/// MAIN NAV SCROLLING EVENT
 const nav = document.querySelector('.main-navigation');
 const navLink = document.querySelectorAll('nav a');
 window.onscroll = () => scrollPosition();
@@ -25,10 +31,9 @@ function scrollPosition(){
         })
     }
 };
+//END SCROLLING 
 
-//const drag = document.querySelector('dragImage');
-//const drop = document.querySelector('img-box');
-
+///DROP EVENT IMAGES
 function allowDrop(event){
     event.preventDefault();
 }
@@ -42,7 +47,9 @@ function drop(event){
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
 }
+///END DROP 
 
+/// WHEEL EVENT IMAGE
 const lastImg = document.querySelector('.imgLast')
 
 lastImg.addEventListener('wheel', (zoom) => {
@@ -50,5 +57,6 @@ lastImg.addEventListener('wheel', (zoom) => {
         lastImg.style.transform = "scale(1.5)"
 
 });
+///END WHEEL
 
 
