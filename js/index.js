@@ -1,4 +1,10 @@
-
+///WINDOW ONLOAD EVENT
+const page = document.querySelector('body');
+const fade = document.querySelector('.fade');
+window.onload = ((event) =>{
+    page.classList.remove('fade');
+});
+///END ONLOAD
 
 /// MOUSEOVER BUS ANIMATION
 const busImg = document.querySelector('img');
