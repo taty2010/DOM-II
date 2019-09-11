@@ -136,6 +136,14 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+body {
+  opacity: 1;
+  transition: 0.7 opacity;
+}
+body.fade {
+  opacity: 0;
+  transition: none;
+}
 h1,
 h2,
 h3,
