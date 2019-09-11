@@ -121,3 +121,17 @@ function key() {
 }
 
 ///END KEYDOWN
+
+///FOCUS AND BLUR
+
+const form = document.querySelectorAll('.form');
+
+form.forEach((el) => {
+    el.addEventListener('focus', (el) => {
+        el.target.style.background = 'yellow';
+    }, true);
+
+    el.addEventListener('blur', (el) =>{
+        el.target.style.background = '';
+    }, true);
+})
