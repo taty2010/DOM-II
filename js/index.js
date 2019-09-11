@@ -69,8 +69,9 @@ function drop(event){
 const lastImg = document.querySelector('.imgLast')
 
 lastImg.addEventListener('wheel', (zoom) => {
-        let bigger = 1
-        lastImg.style.transform = "scale(1.5)"
+        let bigger = zoom.deltaY * -0.01;
+        bigger = Math.min(Math.max(0.225, bigger), 6)
+        lastImg.style.transform = `scale(${bigger})`
 
 });
 ///END WHEEL
