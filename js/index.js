@@ -106,3 +106,18 @@ headerText.forEach((el) =>{
 
 })
 /// END CLICK EVENT
+
+const body = document.querySelector('.container')
+body.addEventListener("click", () => {
+    body.style.background = 'lightgray';
+})
+
+///KEYDOWN EVENT
+const p = document.querySelector('p');
+document.addEventListener('keydown', key);
+
+function key() {
+    p.style.color = "purple";
+}
+
+///END KEYDOWN
